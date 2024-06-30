@@ -1,0 +1,330 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    height: 100%;
+}
+
+.main-container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+}
+
+.header{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+    background-color: #636AB9;
+    position: sticky;
+}
+
+.header a:hover {
+  color: #E45BAB; /* Change this to your preferred hover color */
+  font-weight: bold;
+}
+
+.logo img {
+    width: 150px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+/*FLEXBOX FUNCTIONALITY */
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+    flex: 1;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    display: flex;
+    padding: 8px;
+    font-size: 18px;
+   
+   
+}
+
+/* SOCIAL ICONS CSS */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    margin: 0 10px;
+  }
+  
+  .social-icons a {
+    text-decoration: none;
+    color: #000;
+    font-size: 30px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #E45BAB; /* Change to your desired hover color */
+  }
+
+
+  /* Content CSS */
+
+  .content{
+    flex: 8;
+    background-image: url(backgroundhome.jpg);
+    background-size: cover;
+    background-position: -1px;
+    
+  }
+
+  .intro{
+    margin: 35px;
+    border: 10px;
+    padding: 10px;
+    color: white;
+    width: 600px;
+  }
+
+  p{
+    font-size: 22px;
+  }
+
+  .my-button {
+    background-color: #636AB9; /* Green background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 15px 32px; /* Add some padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make it inline */
+    font-size: 16px; /* Increase font size */
+    margin: 4px 2px; /* Add some margin */
+    cursor: pointer; /* Add a pointer on hover */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
+  }
+  
+  .my-button:hover {
+    background-color: #202FAE; /* Darker green on hover */
+  }
+
+ .video-container-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .video-item-home {
+    width: 320px;  /* Fixed width */
+    height: 180px; /* Fixed height (16:9 aspect ratio) */
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .video-item-home iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  } */
+  
+  /* Optional: Adjust layout for very small screens */
+  @media (max-width: 360px) {
+    .video-item {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  /*HistoriaAM CSS */
+
+  .historia{
+    flex: 8;
+    background-image: url(backgroundabout.png);
+    background-size: cover;
+    background-position: -1px;
+    color: white;
+    padding: 8px;
+    box-shadow: 0 0 0 20px;
+  }
+
+.text-history{
+    margin: 35px;
+    border: 10px;
+    padding: 10px;
+    color: white;
+    width: 600px;
+}
+
+/*Videos CSS */
+
+.video-section {
+    flex: 8;
+    background-image: url(backgroundabout.png);
+    background-size: cover;
+    background-position: -1px;
+    color: white;
+    padding: 8px;
+    box-shadow: 0 0 0 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.video-carousel {
+    position: relative;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-item {
+    flex: 0 0 100%;
+    padding: 0 10px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-info {
+    margin-top: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+/* future sections NOMINACION */
+
+.content-nominate {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(abuelitanominacion.png);
+  flex: 8;
+}
+
+
+.container-nominate {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.nominate {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #EF8200;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #E45BAB;
+}
