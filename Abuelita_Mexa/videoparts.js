@@ -21,4 +21,11 @@
             updateCarousel();
         }
     });
+
+document.querySelector('.hamburger').addEventListener('click', function() {
+        document.querySelector('.center-links').classList.toggle('show');
+    });
 </script>
+
+// Responsive Navigation Bar
+
