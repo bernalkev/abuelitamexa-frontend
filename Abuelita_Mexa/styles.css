@@ -27,7 +27,7 @@ body{
 }
 
 .logo img {
-    width: 150px; /* Set your desired width */
+    max-width: 150px; /* Set your desired width */
     height: auto; /* Maintain aspect ratio */
   }
 
@@ -64,27 +64,88 @@ li{
 
 /* SOCIAL ICONS CSS */
 
+.center-links ul,
 .social-icons {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
+    display: flex;
   }
   
+  .center-links li,
   .social-icons li {
     margin: 0 10px;
   }
   
+  .center-links a,
   .social-icons a {
     text-decoration: none;
     color: #000;
-    font-size: 30px;
+    font-size: 24px;
     transition: color 0.3s ease;
   }
   
   .social-icons a:hover {
     color: #E45BAB; /* Change to your desired hover color */
   }
+
+  /* Responsive styles */
+@media screen and (max-width: 768px) {
+  .header {
+      flex-direction: column;
+  }
+
+  .logo {
+      margin-bottom: 10px;
+  }
+
+  .center-links ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .center-links li {
+      margin: 5px 0;
+  }
+
+  .social-icons {
+      margin-top: 10px;
+  }
+}
+
+/* For even smaller screens */
+@media screen and (max-width: 480px) {
+  .social-icons {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .social-icons li {
+      margin: 5px;
+  }
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+      display: block;
+  }
+
+  .center-links {
+      display: none;
+  }
+
+  .center-links.show {
+      display: block;
+  }
+}
 
 
 
@@ -95,7 +156,8 @@ li{
     background-image: url(backgroundhome.jpg);
     background-size: cover;
     background-position: -1px;
-    
+    max-width: 100%;
+    height: auto;
   }
 
   .intro{
@@ -172,6 +234,8 @@ li{
     color: white;
     padding: 8px;
     box-shadow: 0 0 0 20px;
+    max-width: 100%;
+    height: auto;
   }
 
 .text-history{
@@ -192,6 +256,8 @@ li{
     color: white;
     padding: 8px;
     box-shadow: 0 0 0 20px;
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -288,6 +354,8 @@ li{
   min-height: 100vh;
   background-image: url(abuelitanominacion.png);
   flex: 8;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -332,4 +400,19 @@ button {
 
 button:hover {
   background-color: #E45BAB;
+}
+
+/* Styles for mobile devices */
+@media screen and (max-width: 767px) {
+  /* Your mobile-specific styles here */
+}
+
+/* Styles for tablets */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Your tablet-specific styles here */
+}
+
+/* Styles for desktops */
+@media screen and (min-width: 1024px) {
+  /* Your desktop-specific styles here */
 }
