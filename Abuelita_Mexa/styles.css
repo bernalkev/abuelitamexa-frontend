@@ -176,7 +176,7 @@ li{
     color: white;
     text-align: left;
     padding: 20px;
-    width: 650px;
+    width: 400px;
   }
 
   /* .content{
@@ -294,7 +294,7 @@ li{
 }
 
 /* Very Small Screens */
-@media (max-width: 480px) {
+@media (max-width: 450px) {
   .historia {
     padding: 10px; /* Further reduce padding */
   }
