@@ -78,7 +78,7 @@ a {
   margin: 0 20px;
 }
 
-.center-links ul, .right-icons ul {
+.center-links ul{
     list-style: none;
     padding: 0;
     margin: 0;
@@ -87,20 +87,25 @@ a {
     align-items: center;
 }
 
-.center-links li, .right-icons li {
-    margin: 0 10px;
+.center-links li{
+    margin: 0 15px;
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.center-links a,
-.right-icons a {
+.center-links a{
     font-size: 16px;
     display: flex;
     align-items: center;;
     height: 100%;
     padding: 20px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .social-icons {
@@ -166,28 +171,44 @@ a {
     .center-links{
       width: 100%;
       height: auto;
+      margin: 0;
     }
 
-    .center-links ul, .right-icons ul {
+    .center-links ul{
         flex-direction: column;
         align-items: center;
         height: auto;
     }
 
-    .center-links li, .right-icons li {
+    .center-links li{
         margin: 10px 0;
         height: auto;
     }
 
-    .center-links a,
-    .right-icons a,
-    .social-icons a {
+    .center-links a{
         height: auto;
     }
 
+    .right-icons {
+      height: auto;
+      width: 100%;
+      margin-top: 10px;
+  }
+
     .social-icons{
       height: auto;
+      justify-content: center;
+      width: 100%;
     }
+
+    .social-icons li {
+      margin: 5px 10px;
+      height: auto;
+  }
+
+  .social-icons a {
+      height: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -195,12 +216,7 @@ a {
         max-height: 40px;
     }
 
-    .center-links{
-      width: 100%;
-    }
-
-    .center-links a,
-    .right-icons a {
+    .center-links a{
         font-size: 14px;
     }
 
