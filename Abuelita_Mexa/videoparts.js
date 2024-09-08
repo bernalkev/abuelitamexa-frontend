@@ -1,4 +1,4 @@
-<script>
+/* <script>
     const slide = document.querySelector('.carousel-slide');
     const prevButton = document.querySelector('.carousel-button.prev');
     const nextButton = document.querySelector('.carousel-button.next');
@@ -22,10 +22,7 @@
         }
     });
 
-document.querySelector('.hamburger').addEventListener('click', function() {
-        document.querySelector('.center-links').classList.toggle('show');
-    });
-</script>
+</script> */
 
 // Responsive Navigation Bar
 

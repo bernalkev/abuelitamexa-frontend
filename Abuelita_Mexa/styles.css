@@ -28,12 +28,13 @@ body{
 
 .logo img {
     max-width: 150px; /* Set your desired width */
-    height: auto; /* Maintain aspect ratio */
+    max-height: 60px; /* Maintain aspect ratio */
+    display: flex;
   }
 
-ul{
+/* ul{
     list-style-type: none;
-}
+} */
 
 a{
     text-decoration: none;
@@ -57,131 +58,162 @@ ul{
 li{
     display: flex;
     padding: 8px;
-    font-size: 18px;
-   
-   
+    font-size: 16px;
+}
+
+/* Responsive Navigation Bar CSS */
+.center-links ul, .right-icons ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.center-links li, .right-icons li{
+  margin: 0 10px; /*Adjust spacing */
+}
+
+.center-links a,
+.right-icons a {
+  font-size: 16px; /* Adjust as needed */
 }
 
 /* SOCIAL ICONS CSS */
 
-.center-links ul,
 .social-icons {
     display: flex;
     justify-content: center;
     list-style: none;
     padding: 0;
-    display: flex;
   }
   
-  .center-links li,
   .social-icons li {
     margin: 0 10px;
   }
   
-  .center-links a,
   .social-icons a {
     text-decoration: none;
     color: #000;
-    font-size: 24px;
+    font-size: 20px;
     transition: color 0.3s ease;
+  }
+
+  .social-icons .fab {
+    font-size: 20px; /* Adjust icon size */
   }
   
   .social-icons a:hover {
     color: #E45BAB; /* Change to your desired hover color */
   }
 
-  /* Responsive styles */
-@media screen and (max-width: 768px) {
-  .header {
-      flex-direction: column;
+
+/* Mobile Styles */
+
+@media (max-width: 768px){
+  .header{
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .logo {
-      margin-bottom: 10px;
+  .center-links ul{
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
   }
 
-  .center-links ul {
-      flex-direction: column;
-      align-items: center;
+  .center-links li{
+    margin: 10px 0;
   }
 
-  .center-links li {
-      margin: 5px 0;
-  }
-
-  .social-icons {
-      margin-top: 10px;
-  }
-}
-
-/* For even smaller screens */
-@media screen and (max-width: 480px) {
-  .social-icons {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-
-  .social-icons li {
-      margin: 5px;
+  .right-icons ul{
+    margin-top: 10px;
+    justify-content: center;
   }
 }
 
-/* Hamburger menu for mobile */
-.hamburger {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  .hamburger {
-      display: block;
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 40px; /* Adjust for very small screens */
   }
 
-  .center-links {
-      display: none;
+  .center-links a,
+  .right-icons a {
+    font-size: 14px; /* Adjust font size */
   }
 
-  .center-links.show {
-      display: block;
+  .social-icons .fab {
+    font-size: 18px; /* Adjust icon size */
   }
 }
 
   /* Content CSS */
 
-  .content{
-    flex: 8;
-    background-image: url(backgroundhome.jpg);
-    background-size: cover;
-    background-position: -1px;
-    max-width: 100%;
+/* Responsive Content CSS */
+
+.content{
+    padding: 20px;
+    max-width: 100%; /*Adjust according to your design */
+    background-image: url(backgroundinicio.jpg);
     height: auto;
+    flex: 8;
+    background-size: cover;
+    background-position: center;
   }
 
-  .intro{
+  .intro h1{
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+    text-align: left;
+    max-width: 550px;
+    padding: 20px;
+  }
+
+  .intro p{
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    width: 650px;
+  }
+
+  /* .content{
+    flex: 8;
+    background-image: url(backgroundinicio.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 8px;
+    box-shadow: 0 0 0 20px;
+    max-width: 100%;
+    height: auto;
+  } */
+
+  /* .intro{
     margin: 35px;
     border: 10px;
     padding: 10px;
     color: white;
-    width: 600px;
-  }
+    width: 550px;
+  } */
 
-  p{
-    font-size: 22px;
-  }
+  /* p{
+    font-size: 23px;
+  } */
 
   .my-button {
     background-color: #636AB9; /* Green background */
     border: none; /* Remove borders */
     color: white; /* White text */
-    padding: 15px 32px; /* Add some padding */
+    padding: 10px 20px; /* Add some padding */
     text-align: center; /* Center text */
     text-decoration: none; /* Remove underline */
     display: inline-block; /* Make it inline */
     font-size: 16px; /* Increase font size */
-    margin: 4px 2px; /* Add some margin */
+    margin: 4px 2px 20px 20px; /* Add some margin */
     cursor: pointer; /* Add a pointer on hover */
-    border-radius: 4px; /* Rounded corners */
+    border-radius: 5px; /* Rounded corners */
     transition: background-color 0.3s; /* Smooth background color transition */
   }
   
@@ -189,60 +221,90 @@ li{
     background-color: #202FAE; /* Darker green on hover */
   }
 
- .video-container-home {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-   
-  }
-  
-  .video-item-home {
-    width: 320px;  /* Fixed width */
-    height: 180px; /* Fixed height (16:9 aspect ratio) */
-    overflow: hidden;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  
-  }
-  
-  .video-item-home iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    
-  } */
-  
-  /* Optional: Adjust layout for very small screens */
-  @media (max-width: 360px) {
-    .video-item {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-    }
+  /* Responsive Adjustments */
+  /* Mobile Styles */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2em; /* Adjust for smaller screens */
   }
 
+  .intro p {
+    font-size: 1em; /* Adjust for smaller screens */
+  }
+
+  .my-button {
+    padding: 8px 16px; /* Adjust button size */
+    font-size: 0.9em; /* Adjust button text size */
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 1.5em; /* Further reduce font size */
+  }
+
+  .intro p {
+    font-size: 0.9em; /* Further reduce font size */
+  }
+
+  .my-button {
+    padding: 6px 12px; /* Further adjust button size */
+    font-size: 0.8em; /* Further adjust button text size */
+  }
+}
   /*HistoriaAM CSS */
-
-  .historia{
+  .historia {
     flex: 8;
-    background-image: url(backgroundabout.png);
-    background-size: cover;
-    background-position: -1px;
-    color: white;
-    padding: 8px;
-    box-shadow: 0 0 0 20px;
+    background-image: url('backgroundabout.png'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Text color */
+    padding: 20px; /* Adjust padding */
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
     max-width: 100%;
     height: auto;
   }
+  
 
-.text-history{
-    margin: 35px;
-    border: 10px;
-    padding: 10px;
-    color: white;
-    width: 600px;
+  .text-history {
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+    border-radius: 8px; /* Optional rounded corners */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 800px; /* Max width for larger screens */
+  }
+
+  /* Mobile Styles */
+@media (max-width: 768px) {
+  .historia {
+    padding: 15px; /* Adjust padding for smaller screens */
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust shadow for smaller screens */
+  }
+
+  .text-history {
+    margin: 10px; /* Reduce margin on smaller screens */
+    padding: 15px; /* Adjust padding */
+    width: 100%; /* Full width */
+    max-width: none; /* Remove max-width constraint */
+  }
 }
+
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .historia {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .text-history {
+    margin: 5px; /* Further reduce margin */
+    padding: 10px; /* Further adjust padding */
+  }
+}
+
 
 /*Videos CSS */
 
@@ -250,7 +312,7 @@ li{
     flex: 8;
     background-image: url(backgroundabout.png);
     background-size: cover;
-    background-position: -1px;
+    background-position: center;
     color: white;
     padding: 8px;
     box-shadow: 0 0 0 20px;
@@ -274,7 +336,7 @@ li{
     text-align: center;
     max-width: 800px;
     margin: 0 auto 40px;
-    font-size: 1.1em;
+    font-size:larger;
     line-height: 1.6;
 }
 
@@ -339,28 +401,32 @@ li{
 
 .carousel-button.next {
     right: 10px;
+
 }
-/* future sections NOMINACION */
+/* NOMINATION SECTION */
 
 .content-nominate {
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-image: url(abuelitanominacion.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   flex: 8;
   max-width: 100%;
   height: auto;
 }
 
-
 .container-nominate {
   width: 100%;
-  max-width: 500px;
-  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .nominate {
@@ -370,13 +436,32 @@ li{
   box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-
 form {
   display: flex;
   flex-direction: column;
 }
 
-input, textarea {
+.nominate input,
+.nominate textarea,
+.nominate button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.nominate button {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+
+
+/* input, textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
@@ -394,23 +479,50 @@ button {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
-}
+} */
 
-button:hover {
+.nominate button:hover {
   background-color: #E45BAB;
 }
 
-/* Styles for mobile devices */
-@media screen and (max-width: 767px) {
-  /* Your mobile-specific styles here */
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .content-nominate{
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .nominate {
+    padding: 15px;
+  }
+
+  .nominate h2 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+  }
+
+  .nominate input,
+  .nominate textarea,
+  .nominate button {
+    font-size: 0.9em; /* Adjust font size for inputs and button */
+  }
 }
 
-/* Styles for tablets */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  /* Your tablet-specific styles here */
-}
+/* Very Small Screens */
+@media (max-width: 480px) {
+  .content-nominate {
+    padding: 10px;/* Further adjust padding */
+  }
 
-/* Styles for desktops */
-@media screen and (min-width: 1024px) {
-  /* Your desktop-specific styles here */
+  .nominate {
+    padding: 10px;
+  }
+
+  .nominate h2 {
+    font-size: 1.2em; /* Further adjust font size */
+  }
+
+  .nominate input,
+  .nominate textarea,
+  .nominate button {
+    font-size: 0.8em; /* Further adjust font size */
+  }
 }
