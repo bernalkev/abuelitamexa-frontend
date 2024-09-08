@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html, body{
     height: 100%;
     margin: 0;
@@ -434,122 +440,108 @@ li{
 }
 /* NOMINATION SECTION */
 
-.content-nominate {
+/* .content-nominate {
   font-family: Arial, sans-serif;
-}
+} */
 
-.content-nominate{
+/* Section styling */
+.content-nominate {
   flex: 8;
-  background-image: url(backgroundnominacion2.jpg);
+  background-image: url('backgroundnominacion2.jpg'); /* Update path */
   background-size: cover;
   background-position: center;
-  padding: 8px;
+  padding: 16px;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 0 20px;
+  box-shadow: 0 0 0 20px rgba(0,0,0,0.1);
   max-width: 100%;
-  height: auto;
+  overflow: hidden; /* Prevent overflow */
 }
 
-
+/* Container styling */
 .container-nominate {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%; /* Ensure it does not exceed viewport width */
   margin: 0 auto;
+  padding: 0 16px; /* Add padding for small screens */
 }
 
+/* Form container styling */
 .nominate {
   background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9));
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 600px; /* Limit form width */
+  max-height: 800px; /* Limit form height */
+  overflow: auto; /* Add scrollbars if content exceeds height */
+  margin: 0 auto; /* Center the form within the container */
 }
 
+/* Form elements styling */
 form {
   display: flex;
   flex-direction: column;
 }
 
+/* Input, textarea, and button styling */
 .nominate input,
 .nominate textarea,
 .nominate button {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  font-size: 1rem;
 }
 
+/* Textarea specific styling */
+.nominate textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Button styling */
 .nominate button {
-  background-color: #007bff; /* Button background color */
-  color: #fff; /* Button text color */
+  background-color: #007bff;
+  color: #fff;
   border: none;
   cursor: pointer;
-  font-size: 1em;
+  padding: 12px;
 }
-
-/* input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #EF8200;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-} */
 
 .nominate button:hover {
   background-color: #E45BAB;
 }
 
-/* Mobile Styles */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .content-nominate{
-    padding: 15px; /* Adjust padding for smaller screens */
+  .container-nominate{
+    padding: 0 12px; /* Reduce padding for tablets and mobile devices */
   }
 
   .nominate {
-    padding: 15px;
-  }
-
-  .nominate h2 {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    padding: 16px;
+    max-width: 100%; /* Ensure the form doesn't exceed container width */
+    max-height: none; /* Allow height to adjust based on content */
   }
 
   .nominate input,
   .nominate textarea,
   .nominate button {
-    font-size: 0.9rem; /* Adjust font size for inputs and button */
+    margin-bottom: 10px;
   }
 }
 
-/* Very Small Screens */
 @media (max-width: 480px) {
-  .content-nominate {
-    padding: 10px;/* Further adjust padding */
-  }
-
   .nominate {
-    padding: 10px;
-  }
-
-  .nominate h2 {
-    font-size: 1.2rem; /* Further adjust font size */
+    padding: 12px;
   }
 
   .nominate input,
   .nominate textarea,
   .nominate button {
-    font-size: 0.8rem; /* Further adjust font size */
+    margin-bottom: 8px;
+    font-size: 0.9rem;
   }
 }

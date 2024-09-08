@@ -33,20 +33,33 @@
         </div>
         <section class="content-nominate"> 
             <div class="container-nominate">
-                <div class="nominate">
-                    <h2>Nomina a tu Abuela!</h2>
-                    <form>
-                        <input type="text" placeholder="Nombre de tu Abuela" required>
-                        <input type="file" accept="image/*,video/*">
-                        <input type="email" placeholder="email" required>
-                        <textarea placeholder="Comparte su historia" rows="4" required></textarea>
-                        <input type="text" placeholder="Ubicación" required>
-                        <textarea placeholder="Receta Favorita" rows="4" required></textarea>
-                        <button type="submit">Nomina</button>
-                    </form>
-                </div>
+              <div class="nominate">
+                <h2>Nomina a tu Abuela!</h2>
+                <form>
+                  <label for="abuela-name">Nombre de tu Abuela</label>
+                  <input id="abuela-name" type="text" placeholder="Nombre de tu Abuela" required>
+                  
+                  <label for="media">Adjuntar Imagen o Video</label>
+                  <input id="media" type="file" accept="image/*,video/*">
+                  
+                  <label for="email">Correo Electrónico</label>
+                  <input id="email" type="email" placeholder="email" required>
+                  
+                  <label for="history">Comparte su historia</label>
+                  <textarea id="history" placeholder="Comparte su historia" rows="4" required></textarea>
+                  
+                  <label for="location">Ubicación</label>
+                  <input id="location" type="text" placeholder="Ubicación" required>
+                  
+                  <label for="recipe">Receta Favorita</label>
+                  <textarea id="recipe" placeholder="Receta Favorita" rows="4" required></textarea>
+                  
+                  <button type="submit">Nomina</button>
+                </form>
+              </div>
             </div>
-        </section>
+          </section>
+          
     </div>
 </body>
 </html>
