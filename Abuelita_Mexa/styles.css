@@ -8,6 +8,7 @@ html, body{
     height: 100%;
     margin: 0;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 body{
@@ -69,6 +70,7 @@ li{
 }
 
 /* Responsive Navigation Bar CSS */
+
 .center-links ul, .right-icons ul{
   list-style: none;
   padding: 0;
@@ -119,13 +121,14 @@ li{
 @media (max-width: 768px){
   .header{
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .center-links ul{
     flex-direction: column;
     width: 100%;
     text-align: center;
+    align-items: center;
   }
 
   .center-links li{
@@ -278,68 +281,6 @@ li{
     font-size: 0.8rem; /* Further adjust button text size */
   }
 }
-  /*HistoriaAM CSS */
-  .historia {
-    flex: 8;
-    background-image: url('backgroundabout.png'); /* Replace with your image path */
-    background-size: cover; /* Ensure the image covers the section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    color: white; /* Text color */
-    padding: 20px; /* Adjust padding */
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-
-  /* flexible font sizes */
-  .historia h2 {
-    font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem); /* Responsive font size for headings */
-  }
-  
-  .historia p {
-    font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem); /* Responsive font size for paragraphs */
-  }
-  
-  
-
-  .text-history {
-    margin: 0 auto; /* Center the content */
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
-    border-radius: 8px; /* Optional rounded corners */
-    width: 100%; /* Full width on smaller screens */
-    max-width: 100%; /* Max width for larger screens */
-    overflow-wrap: break-word;
-  }
-
-  /* Mobile Styles */
-@media (max-width: 768px) {
-  .historia {
-    padding: 15px; /* Adjust padding for smaller screens */
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust shadow for smaller screens */
-  }
-
-  .text-history {
-    margin: 10px; /* Reduce margin on smaller screens */
-    padding: 15px; /* Adjust padding */
-    width: 100%; /* Full width */
-    max-width: none; /* Remove max-width constraint */
-  }
-}
-
-/* Very Small Screens */
-@media (max-width: 450px) {
-  .historia {
-    padding: 10px; /* Further reduce padding */
-  }
-
-  .text-history {
-    margin: 5px; /* Further reduce margin */
-    padding: 10px; /* Further adjust padding */
-  }
-}
 
 
 /*Videos CSS */
@@ -457,6 +398,8 @@ li{
   box-shadow: 0 0 0 20px rgba(0,0,0,0.1);
   max-width: 100%;
   overflow: hidden; /* Prevent overflow */
+  overflow-y: auto;
+  min-height: 100vh;
 }
 
 /* Container styling */
@@ -474,8 +417,8 @@ li{
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   max-width: 600px; /* Limit form width */
-  max-height: 800px; /* Limit form height */
-  overflow: auto; /* Add scrollbars if content exceeds height */
+  max-height: none; /* Limit form height */
+  overflow: visible; /* Add scrollbars if content exceeds height */
   margin: 0 auto; /* Center the form within the container */
 }
 
@@ -544,5 +487,71 @@ form {
   .nominate button {
     margin-bottom: 8px;
     font-size: 0.9rem;
+  }
+}
+
+  /*HistoriaAM CSS */
+  .historia {
+    flex: 8;
+    background-image: url('backgroundabout.png'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Text color */
+    padding: 20px; /* Adjust padding */
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+    max-width: 100%;
+    min-height: 100vh; 
+    height: auto;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  /* flexible font sizes */
+  .historia h2 {
+    font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem); /* Responsive font size for headings */
+  }
+  
+  .historia p {
+    font-size: clamp(1rem, 2vw + 0.5rem, 1.25rem); /* Responsive font size for paragraphs */
+  }
+  
+  
+
+  .text-history {
+    margin: 0 auto; /* Center the content */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+    border-radius: 8px; /* Optional rounded corners */
+    width: calc(100% - 20px);
+    max-width: 100%; /* Max width for larger screens */
+    overflow-wrap: break-word;
+  }
+
+  /* Mobile Styles */
+@media (max-width: 768px) {
+  .historia {
+    padding: 15px; /* Adjust padding for smaller screens */
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust shadow for smaller screens */
+  }
+
+  .text-history {
+    margin: 10px; /* Reduce margin on smaller screens */
+    padding: 15px; /* Adjust padding */
+    width: 100%; /* Full width */
+    max-width: none; /* Remove max-width constraint */
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 450px) {
+  .historia {
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .text-history {
+    margin: 5px; /* Further reduce margin */
+    padding: 10px; /* Further adjust padding */
   }
 }
