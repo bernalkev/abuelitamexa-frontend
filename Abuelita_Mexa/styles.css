@@ -422,7 +422,7 @@ a {
     margin-top: 10px;
 }
 
-.carousel-button {
+/* .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -446,7 +446,7 @@ a {
 .carousel-button.next {
     right: 10px;
 
-}
+} */
 /* NOMINATION SECTION */
 
 /* .content-nominate {
