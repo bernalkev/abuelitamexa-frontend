@@ -241,6 +241,11 @@ a {
   .intro{
     padding: 20px;
     box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional background for readability */
+    border-radius: 8px; /* Optional rounded corners */
+    width: calc(100% - 30px);
+    max-width: 100%; /* Max width for larger screens */
+    overflow-wrap: break-word;
   }
 
   .intro h1 {
@@ -265,6 +270,7 @@ a {
   .intro a {
     display: inline-block; /* Ensure buttons and links are properly sized */
   }
+
 
   /* .content{
     flex: 8;
@@ -585,7 +591,6 @@ form {
   }
   
   
-
   .text-history {
     margin: 0 auto; /* Center the content */
     padding: 20px;
